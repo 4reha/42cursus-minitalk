@@ -49,6 +49,8 @@ int	main(int argc, char*argv[])
 		{
 			send_char(pid, argv[2][i], &r);
 			usleep(300);
+			if (r != 0)
+				break;
 		}
 		if (r == 0)
 			ft_printf("Data has been recived successfully √\n");
